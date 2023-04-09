@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import JobList from '../JobList/JobList';
 import images from '../../assets/All Images/P3OLGJ1 copy 1.png';
+import FeatureJob from '../FeatureJob/FeatureJob';
 
 
 const Home = () => {
-    const jobListDatas = useLoaderData();
-    console.log(jobListDatas);
+    const featureJobsDatas = useLoaderData();
+    //console.log(featureJobsDatas);
+
+    const [jobListDatas, setJobListDatas] = useState([]);
+    //console.log(jobListDatas);
+    useEffect(()=>{
+        fetch('jobList.json')
+        .then(res => res.json())
+        .then(data => setJobListDatas(data))
+    },[]) ;
+    //console.log(jobListDatas);
     return (
         <div> 
             {/* Banner section start hear */}
-            <section className='md:w-[1120px] mx-auto md:flex justify-center items-center gap-4 mt-4 md:mt-12 p-4 md:p-0'>
+            <section className='md:w-[1120px] mx-auto md:grid grid-cols-2 justify-center items-center gap-4 mt-4 md:mt-12 p-4 md:p-0'>
             <div>
                 <h1 className='text-4xl md:text-6xl font-bold'>
                     One Step<br></br> Closer To Your<br></br> <span className='text-orange-500'>Dream Job</span>
@@ -27,10 +37,10 @@ const Home = () => {
             {/* Banner Section end hear */}
 
             {/* Job list section start Here */}
-            <div className='mt-4 md:mt-16 mb-3 md:mb-8'>
-                <h3 className='text-3xl text-center font-bold'>Job Category List</h3>
+            <div className='mt-4 md:mt-24 mb-3 md:mb-8'>
+                <h3 className='text-3xl text-center font-bold text-orange-500'>Job Category List</h3>
                 <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div className='md:w-[1120px] mx-auto md:flex justify-center items-center gap-8 mt-3 md:mt-6'>
+                <div className='md:w-[1120px] mx-auto md:grid grid-cols-4 justify-center items-center gap-4 md:gap-8  mt-3 md:mt-6'>
                 {
                     jobListDatas.map((jobListData) => <JobList
                     key={jobListData.id}
@@ -40,6 +50,23 @@ const Home = () => {
                 </div>
             </div>
             {/* Job list section end Here */}
+
+            {/* Featured jobSection start here */}
+            <div className='mt-4 md:mt-24 mb-3 md:mb-8'>
+                <div>
+                    <h3 className='text-3xl text-center font-bold text-orange-500'>Featured Jobs</h3>
+                    <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                </div>
+                <div className='grid grid-cols-2 text-center justify-around items-center border bottom-2 border-gray-200 gap-4'>
+                    {
+                        featureJobsDatas.map((featureJobsData) => <FeatureJob
+                        key={featureJobsData.id}
+                        featureJobsData={featureJobsData}
+                        ></FeatureJob>)
+                    }
+                </div>
+            </div>
+            {/* Featured jobSection end here */}
 
         </div>
     );
