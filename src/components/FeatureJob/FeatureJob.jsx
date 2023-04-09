@@ -4,15 +4,14 @@ const FeatureJob = (props) => {
     //console.log(props.featureJobsData);
     const {id, company_logo, job_title, company_name, location, remote_or_onsite, salary} = props.featureJobsData;
     return (
-        <div className=''>
+        <div className='border-2 border-gray-200 space-y-5 p-4 md:p-6 font-bold'>
             <img src="" alt="" />
-            <p>{job_title}</p>
-            <p><small>{company_name}</small></p>
-            <button>{remote_or_onsite}</button>
-            <span><small>{location}</small></span>
-             <span><small>{salary}</small></span>
-            <button>View Details</button>
-
+            <p className='text-3xl '>{job_title}</p>
+            <p className='font-lg 2xl'><small>{company_name}</small></p>
+            <p><button className='border-2 border-orange-500 hover:bg-orange-500 px-6 py-2 mb-2'>{remote_or_onsite}</button></p>
+            <span><small>{location} </small></span>
+             <span><small>Salary: {salary}</small></span>
+            <p><button className= 'bg-orange-500 hover:bg-orange-700 px-6 py-3  text-white'>View Details</button></p>
         </div>
     );
 };

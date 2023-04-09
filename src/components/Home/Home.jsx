@@ -52,12 +52,12 @@ const Home = () => {
             {/* Job list section end Here */}
 
             {/* Featured jobSection start here */}
-            <div className='mt-4 md:mt-24 mb-3 md:mb-8'>
+            <div className=' mt-12 md:mt-24 mb-3 md:mb-8'>
                 <div>
                     <h3 className='text-3xl text-center font-bold text-orange-500'>Featured Jobs</h3>
                     <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
-                <div className='grid grid-cols-2 text-center justify-around items-center border bottom-2 border-gray-200 gap-4'>
+                <div className='md:w-[1120px] mx-auto md:grid grid-cols-2 justify-center items-center gap-6 mt-4 md:mt-6'>
                     {
                         featureJobsDatas.map((featureJobsData) => <FeatureJob
                         key={featureJobsData.id}
