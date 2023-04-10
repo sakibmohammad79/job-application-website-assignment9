@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='md:w-[1120px] mx-auto space-y-5 my-12 p-4 md:p-6'>
+        <div className='md:w-[1120px] mx-auto space-y-5 my-12 p-4 md:p-6 text-gray-500'>
             <div>
                 <h3 className='text-3xl font-bold text-orange-500'>A. When should you use context API?</h3>
                 <p className='font-medium text-2xl'><span className='font-bold text-3xl text-orange-400'>Answer:</span> In React, passing props is a fundamental concept that enables a parent component to share data with its child components as well as other components within an application.In many cases, passing props can be an effective way to share data between different parts of your application. But passing props down a chain of multiple components to reach a specific component can make your code overly cumbersome.Prop drilling can make your code more difficult to read and maintain, and can also make it harder to refactor your components later on.This is where the Context API comes in. With Context API, you can store data at the top level of the component tree and make it available to all other components that need it without passing props.</p>

@@ -2,25 +2,25 @@
 [
     {  
       "id": "01",
-      "logo": "logo",
+      "logo": "https://i.postimg.cc/q7q954Vb/accounts-1.png",
       "name": "Account & Finance",
       "jobs_available": "2500+"
     },
     {
       "id": "02",  
-      "logo": "logo",
+      "logo": "https://i.postimg.cc/jScDhQt6/business-1.png",
       "name": "Creative Design",
       "jobs_available": 1800
     },
     {
       "id": "03",
-      "logo": "logo",
+      "logo": "https://i.postimg.cc/RV9Cb6Pg/social-media-1.png",
       "name": "Marketing & Sales",
       "jobs_available": "1200+"
     },
     {
       "id": "04", 
-      "logo": "logo",
+      "logo": "https://i.postimg.cc/HLLVvckq/chip-1.png",
       "name": "Engineering Job",
       "jobs_available": "900+"
     }

@@ -22,7 +22,7 @@ const Home = () => {
     return (
         <div> 
             {/* Banner section start hear */}
-            <section className='md:w-[1120px] mx-auto md:grid grid-cols-2 justify-center items-center gap-4 mt-4 md:mt-12 p-4 md:p-0'>
+            <section className='text-gray-500 md:w-[1120px] mx-auto md:grid grid-cols-2 justify-center items-center gap-4 mt-4 md:mt-12 p-4 md:p-0'>
             <div>
                 <h1 className='text-4xl md:text-6xl font-bold'>
                     One Step<br></br> Closer To Your<br></br> <span className='text-orange-500'>Dream Job</span>
@@ -39,7 +39,7 @@ const Home = () => {
             {/* Banner Section end hear */}
 
             {/* Job list section start Here */}
-            <div className='mt-4 md:mt-24 mb-3 md:mb-8'>
+            <div className='mt-4 md:mt-24 mb-3 md:mb-8 text-gray-500'>
                 <h3 className='text-3xl text-center font-bold text-orange-500'>Job Category List</h3>
                 <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className='md:w-[1120px] mx-auto md:grid grid-cols-4 justify-center items-center gap-4 md:gap-8  mt-3 md:mt-6'>
@@ -54,7 +54,7 @@ const Home = () => {
             {/* Job list section end Here */}
 
             {/* Featured jobSection start here */}
-            <div className=' mt-12 md:mt-24 mb-3 md:mb-8'>
+            <div className=' mt-12 md:mt-24 mb-3 md:mb-8 text-gray-500'>
                 <div>
                     <h3 className='text-3xl text-center font-bold text-orange-500'>Featured Jobs</h3>
                     <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>

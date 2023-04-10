@@ -8,7 +8,7 @@ const Header = () => {
                 <div className='text-4xl mb-4 md:mb-0 ml-4 md:ml-0'>
                     <h3 className='text-orange-500'>CareerInfo</h3>
                 </div>
-                <div className='font-lg mb-4 md:mb-0 ml-4 md:ml-0'>
+                <div className='font-lg mb-4 md:mb-0 ml-4 md:ml-0 '>
                     <Link className='hover:text-orange-500' to="/">Home</Link>
                     <Link className='mx-6 hover:text-orange-500' to="/statistics">Statistics</Link>
                     <Link className='hover:text-orange-500' to="/appliedJobs">Applied Jobs</Link>
