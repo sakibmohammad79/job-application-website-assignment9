@@ -4,7 +4,7 @@ import React from 'react';
 
 const JobList = (props) => {
     //console.log(props.jobListData);
-    const {id, logo, name, jobs_available} =props.jobListData;
+    const { logo, name, jobs_available} =props.jobListData;
     return (
         <div className='bg-slate-50 border-2 border-slate-100 p-6 rounded font-bold drop-shadow-md text-lg hover:bg-orange-400'>
             <div className='space-y-2'>

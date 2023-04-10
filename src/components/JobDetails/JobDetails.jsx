@@ -14,18 +14,39 @@ const JobDetails = () => {
             setDetails(data.find(dt=>dt.id==dynamicId))
         })
     },[dynamicId])
-    console.log(details);
-
-    //const data = useLoaderData();
-    //console.log(data);
-    // const detailsData = data.find(dt => dt.id == dynamicId);
-    // setDetails(detailsData);
-    // console.log(details);
+    
     return (
         <div>
-            <h2>details: </h2>
+            <div className=' md:grid grid-cols-3 p-4 md:p-8 gap-8 my-12 md:my-24'>
+                <div className='space-y-5 col-span-2 p-3 md:p-6'>
+                    <h2 className='font-medium'><span className='text-2xl font-bold text-orange-500'>Job Description:</span> {details.job_description}</h2>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Job Responsibility:</span> {details.job_responsibility}</p>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Educational Requirements:</span> {details.educational_requirements}</p>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Experiences:</span> {details.experiences}</p>
+                </div>
+               <div>
+                <div>
+                <div className='rounded-lg space-y-5 col-span-1 bg-orange-100 p-3 md:p-6'>
+                    <h2 className='text-2xl font-bold text-orange-500'>Job Details</h2>
+                    <hr></hr>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Salary:</span> {details.salary}</p>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Job Title:</span> {details.job_title}</p>
+                    <h2 className='text-2xl font-bold text-orange-500'>Contact information</h2>
+                    <hr></hr>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Phone:</span> {details.phone}</p>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Email:</span> {details.email}</p>
+                    <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Location:</span> {details.location}</p>
+                </div>
+                </div>
+                <div className='font-bold text-white mt-6'>
+                    <button className='bg-orange-500 hover:bg-orange-700 py-4 px-6 w-full rounded-lg'>Apply Now</button>
+                </div>
+               </div>
+                
+            </div>
         </div>
     );
 };
 
 export default JobDetails;
+
