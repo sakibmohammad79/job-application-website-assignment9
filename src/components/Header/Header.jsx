@@ -15,7 +15,7 @@ const Header = () => {
                     <Link className='mx-6 hover:text-orange-500' to="/blog">Blog</Link>
                 </div>
                 <div className='ml-4 md:ml-0'>
-                    <button className='font-lg  bg-orange-500 hover:bg-orange-700 rounded-lg px-6 py-3'>Star Applying</button>
+                    <button className='font-lg  bg-orange-500 hover:bg-orange-700 rounded-lg px-6 py-3'>Start Applying</button>
                 </div>
             </div>
             <div className='flex justify-center'>
