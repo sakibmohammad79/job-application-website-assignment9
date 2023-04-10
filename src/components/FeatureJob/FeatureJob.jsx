@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeatureJob = (props) => {
     //console.log(props.featureJobsData);
@@ -11,7 +12,7 @@ const FeatureJob = (props) => {
             <p><button className='border-2 border-orange-500 hover:bg-orange-500 px-6 py-2 mb-2'>{remote_or_onsite}</button></p>
             <span><small>{location} </small></span>
              <span><small>Salary: {salary}</small></span>
-            <p><button className= 'bg-orange-500 hover:bg-orange-700 px-6 py-3  text-white'>View Details</button></p>
+            <p><Link to={`/jobDetails/${id}`}><button  className= 'bg-orange-500 hover:bg-orange-700 px-6 py-3  text-white'>View Details</button></Link></p>
         </div>
     );
 };
