@@ -7,10 +7,8 @@ import FeatureJob from '../FeatureJob/FeatureJob';
 
 const Home = () => {
     const featureJobsDatas = useLoaderData();
-    console.log(featureJobsDatas);
+    //console.log(featureJobsDatas);
     
-    // const [featureJobDatas, setFeatureJobDatas] = useState([]);
-    // setFeatureJobDatas(useLoaderData())
     const [jobListDatas, setJobListDatas] = useState([]);
     
     useEffect(()=>{
@@ -60,12 +58,7 @@ const Home = () => {
                     <p className='text-center font-bold'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 </div>
                 <div className='md:w-[1120px] mx-auto md:grid grid-cols-2 justify-center items-center gap-6 mt-4 md:mt-6'>
-                    {/* {
-                        featureJobDatas.map((featureJobsData) => <FeatureJob
-                        key={featureJobsData.id}
-                        featureJobsData={featureJobsData}
-                        ></FeatureJob>)
-                    } */}
+                    
                     {
                         featureJobsDatas?featureJobsDatas.map((featureJobsData) => <FeatureJob
                         key={featureJobsData.id}

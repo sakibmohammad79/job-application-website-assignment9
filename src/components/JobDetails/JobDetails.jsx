@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../../utility';
 
 
 const JobDetails = () => {
@@ -14,10 +15,15 @@ const JobDetails = () => {
             setDetails(data.find(dt=>dt.id==dynamicId))
         })
     },[dynamicId])
+
+    const handleAddToCard = (id) =>{
+        //console.log(id);
+        addToDb(id);
+    }
     
     return (
         <div>
-            <div className=' md:grid grid-cols-3 p-4 md:p-8 gap-8 my-12 md:my-24 text-gray-500'>
+            <div className='md:w-[1100px] mx-auto md:grid grid-cols-3 p-4 md:p-8 gap-8 my-12 md:my-24 text-gray-500'>
                 <div className='space-y-5 col-span-2 p-3 md:p-6'>
                     <h2 className='font-medium'><span className='text-2xl font-bold text-orange-500'>Job Description:</span> {details.job_description}</h2>
                     <p className='font-medium'><span className='text-2xl font-bold text-orange-500'>Job Responsibility:</span> {details.job_responsibility}</p>
@@ -39,7 +45,7 @@ const JobDetails = () => {
                 </div>
                 </div>
                 <div className='font-bold text-white mt-6'>
-                    <button className='bg-orange-500 hover:bg-orange-700 py-4 px-6 w-full rounded-lg'>Apply Now</button>
+                    <button onClick={()=>handleAddToCard(dynamicId)} className='bg-orange-500 hover:bg-orange-700 py-4 px-6 w-full rounded-lg'>Apply Now</button>
                 </div>
                </div>
                 
