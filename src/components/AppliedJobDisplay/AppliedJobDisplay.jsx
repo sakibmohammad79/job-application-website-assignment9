@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AppliedJobDisplay = (props) => {
-    const {location, salary, company_logo, company_name, job_title, type_one, type_two} = props.singleJob;
+    const {id, location, salary, company_logo, company_name, job_title, type_one, type_two} = props.singleJob;
     return (
         <div className='md:w-[1120px] mx-auto my-16'>
             <div className='font-bold text-gray-600 py-8 px-6 flex justify-between items-center md:h-[180px] md:w-[800px]  mx-auto border-2 border-gray-300 drop-shadow-lg'>
@@ -19,7 +20,7 @@ const AppliedJobDisplay = (props) => {
                 </div>
             </div>
             <div>
-                <button className='text-white bg-orange-500 hover:bg-orange-700 py-3 px-6 rounded'>View Details</button>
+                <Link to={`/jobDetails/${id}`}><button className='text-white bg-orange-500 hover:bg-orange-700 py-3 px-6 rounded'>View Details</button></Link>
             </div>
         </div>
     </div>
