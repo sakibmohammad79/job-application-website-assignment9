@@ -65,15 +65,7 @@ const Statistics = () => {
                             <Tooltip></Tooltip>
                         </AreaChart>
                 </ResponsiveContainer>
-                {/* <BarChart
-                width={800}
-                height={300}
-                data={marksData}>
-                    <Bar fill="#8884d8" dataKey="assignment_marks"></Bar>
-                    <XAxis dataKey="assignment_name"></XAxis>
-                    <YAxis dataKey="assignment_marks"></YAxis>
-                    <Tooltip></Tooltip>
-                </BarChart> */}
+                
             </div>
         </div>
 

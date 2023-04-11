@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
-import { addToDb } from '../../utility';
+
 
 
 const JobDetails = () => {
@@ -16,9 +16,11 @@ const JobDetails = () => {
         })
     },[dynamicId])
 
-    const handleAddToCard = (id) =>{
-        //console.log(id);
-        addToDb(id);
+    const handleAddToCard = (obj) =>{
+        console.log(obj);
+        const previousData = JSON.parse(localStorage.getItem('details-cart')) || [];
+        previousData.push(obj);
+        localStorage.setItem('details-cart', JSON.stringify(previousData));
     }
     
     return (
@@ -45,7 +47,7 @@ const JobDetails = () => {
                 </div>
                 </div>
                 <div className='font-bold text-white mt-6'>
-                    <button onClick={()=>handleAddToCard(dynamicId)} className='bg-orange-500 hover:bg-orange-700 py-4 px-6 w-full rounded-lg'>Apply Now</button>
+                    <button onClick={()=>handleAddToCard(details)} className='bg-orange-500 hover:bg-orange-700 py-4 px-6 w-full rounded-lg'>Apply Now</button>
                 </div>
                </div>
                 
