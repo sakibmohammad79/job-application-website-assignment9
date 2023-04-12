@@ -17,7 +17,7 @@ const JobDetails = () => {
     },[dynamicId])
 
     const handleAddToCard = (obj) =>{
-        console.log(obj);
+        //console.log(obj);
         const previousData = JSON.parse(localStorage.getItem('details-cart')) || [];
         previousData.push(obj);
         localStorage.setItem('details-cart', JSON.stringify(previousData));

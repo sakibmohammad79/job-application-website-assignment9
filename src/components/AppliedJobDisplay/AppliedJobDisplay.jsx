@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const AppliedJobDisplay = (props) => {
     const {id, location, salary, company_logo, company_name, job_title, type_one, type_two} = props.singleJob;
     return (
-        <div className='md:w-[1120px] mx-auto my-16'>
-            <div className='font-bold text-gray-600 py-8 px-6 flex justify-between items-center md:h-[180px] md:w-[800px]  mx-auto border-2 border-gray-300 drop-shadow-lg'>
+        <div className=''>
+            <div className='font-bold mb-12 text-gray-600 py-8 px-6 flex justify-between items-center md:h-[180px] md:w-[800px]  mx-auto border-2 border-gray-300 drop-shadow-lg'>
             <div className='flex justify-center items-center gap-4'>
                 <div>
                     <img className='rounded border-2 border-gray-200 p-12' src={company_logo} alt="" />
