@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const FeatureJob = (props) => {
-    //console.log(props.featureJobsData);
     const {id, company_logo, job_title, company_name, location, type_one, type_two, salary} = props.featureJobsData;
     return (
-        <div className='bg-orange-50 h-[400px] border-2 border-gray-200 space-y-5 p-4 md:p-6 font-bold text-gray-500'>
+        <div className='bg-orange-50 md:h-[400px] border-2 border-gray-200 space-y-5 p-4 md:p-6 font-bold text-gray-500'>
             <img  src={company_logo} alt="" />
             <p className='text-3xl '>{job_title}</p>
             <p className=' text-2xl'><small>{company_name}</small></p>
