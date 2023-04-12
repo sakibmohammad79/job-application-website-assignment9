@@ -19,7 +19,7 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex justify-center'>
-                <h3 className='text-3xl ms-8 pb-10 text-orange-400'>Job Details</h3>
+                <h3 className='text-3xl ms-12 pb-10 text-orange-400'>Job Information</h3>
             </div>
         </div>
     );
